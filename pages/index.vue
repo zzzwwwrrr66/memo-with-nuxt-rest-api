@@ -116,7 +116,6 @@
         return false;
       },
       async updateItem(id){
-        debugger
         let filter = this.$store.state.memo.filter(v => {
           if(v.id == id) return true
         })
