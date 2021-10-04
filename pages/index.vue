@@ -121,7 +121,6 @@
           if(v.id == id) return true
         })
         const storeData = filter[0];
-        // filter.title = this.$refs[`updateTitle-${id}`].value;
         let updateTitle = this.$refs[`updateTitle-${id}`][0].$el.value.trim();
         let updateInfo = this.$refs[`updateInfo-${id}`][0].$el.value.trim();
 
@@ -141,7 +140,6 @@
           }
         }
 
-        // console.log(data);
       },
       testFocus(){
         console.log('focus');
