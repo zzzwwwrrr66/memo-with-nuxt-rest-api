@@ -133,9 +133,11 @@
           sendData.info = updateInfo;
         }
         if(Object.keys(sendData).length > 0) {
-          const res = await this.$store.dispatch('UPDATE_MEMO', sendData);
-          if(res.status == 200) {
-            this.$store.dispatch('READ_MEMO');
+          if (window.confirm('UPDATE : ARE YOU SURE?')) {
+            const res = await this.$store.dispatch('UPDATE_MEMO', sendData);
+            if(res.status == 200) {
+              this.$store.dispatch('READ_MEMO');
+            }
           }
         }
 
