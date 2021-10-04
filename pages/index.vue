@@ -116,7 +116,7 @@
         return false;
       },
       async updateItem(id){
-        
+        debugger
         let filter = this.$store.state.memo.filter(v => {
           if(v.id == id) return true
         })
@@ -134,7 +134,7 @@
           sendData.info = updateInfo;
         }
         if(Object.keys(sendData).length > 0) {
-          const res = this.$store.dispatch('UPDATE_MEMO', sendData);
+          const res = await this.$store.dispatch('UPDATE_MEMO', sendData);
           if(res.status == 200) {
             this.$store.dispatch('READ_MEMO');
           }
